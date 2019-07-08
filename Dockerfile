@@ -1,4 +1,4 @@
-FROM ruby:onbuild
+FROM ruby:2.5
 
 ENV PORT 3000
 EXPOSE 3000
@@ -15,7 +15,6 @@ ENV RAILS_ENV development
 ENV RAILS_LOG_TO_STDOUT true
 
 COPY Gemfile /usr/src/app/
-COPY Gemfile.lock /usr/src/app/
 RUN bundle config --global frozen 1
 RUN bundle install --without test
 
