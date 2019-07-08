@@ -1,4 +1,4 @@
-FROM ruby:onbuild
+FROM ruby:2.5
 
 ENV PORT 3000
 EXPOSE 3000
