@@ -20,7 +20,7 @@ RUN bundle config --global frozen 1
 RUN bundle install --without test
 
 COPY . /usr/src/app
-
+RUN bundle exec rake db:migrate
 # uncomment this for production
 # ENV RAILS_ENV production
 # ENV RAILS_SERVE_STATIC_FILES true
